@@ -1,0 +1,190 @@
+/* Configurações Globais */
+:root {
+    --sc-blue: #B9D9EB;      /* Azul bebê */
+    --sc-pink: #FFC0CB;      /* Rosa clássico */
+    --sc-yellow: #FFF4A3;    /* Amarelo pastel */
+    --sc-cream: #FFFBF2;     /* Fundo creme */
+    --sc-dark: #4A3728;      /* Marrom café para texto */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--sc-cream);
+    font-family: 'Montserrat', sans-serif;
+    color: var(--sc-dark);
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+.moodboard-wrapper {
+    max-width: 1000px;
+    width: 100%;
+}
+
+/* Header Estilizado */
+.main-header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.brand {
+    font-family: 'Abril Fatface', serif;
+    font-size: 2rem;
+}
+
+.brand span { color: var(--sc-pink); }
+
+.main-header ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+    align-items: center;
+}
+
+.main-header a {
+    text-decoration: none;
+    color: var(--sc-dark);
+    font-weight: 500;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.cta-kiss {
+    background: var(--sc-pink);
+    padding: 10px 20px;
+    border-radius: 50px;
+    transition: 0.3s;
+}
+
+.cta-kiss:hover { transform: scale(1.05); box-shadow: 0 5px 15px rgba(255, 192, 203, 0.4); }
+
+/* Grid de Moodboard (A Mágica acontece aqui) */
+.moodboard-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 200px;
+    gap: 15px;
+}
+
+.item {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+    transition: transform 0.4s ease;
+}
+
+.item:hover {
+    transform: translateY(-5px);
+}
+
+/* Variações de Tamanho do Grid */
+.item-large { grid-column: span 2; grid-row: span 2; }
+.item-tall { grid-row: span 2; }
+.item-wide { grid-column: span 2; }
+
+/* Estilos de Conteúdo */
+.hero-text {
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: var(--sc-pink);
+}
+
+.handwritten {
+    font-family: 'Beth Ellen', cursive;
+    font-size: 1rem;
+    margin-bottom: 10px;
+    opacity: 0.8;
+}
+
+.hero-text h1 {
+    font-family: 'Abril Fatface', serif;
+    font-size: 3.5rem;
+    line-height: 1;
+    color: white;
+}
+
+.hero-text h1 span { color: var(--sc-dark); }
+
+.image-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.overlay {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    background: rgba(255,255,255,0.8);
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.7rem;
+    font-weight: 700;
+}
+
+.color-block {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    text-align: center;
+}
+
+.blue { background-color: var(--sc-blue); }
+.yellow { background-color: var(--sc-yellow); }
+
+.quote {
+    font-family: 'Abril Fatface', serif;
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+.playlist-card {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.tag {
+    font-size: 0.6rem;
+    text-transform: uppercase;
+    background: var(--sc-yellow);
+    padding: 4px 10px;
+    border-radius: 5px;
+    font-weight: 700;
+}
+
+.song strong { display: block; font-size: 0.9rem; }
+.song span { font-size: 0.7rem; opacity: 0.6; }
+
+.footer-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+    background: var(--sc-dark);
+    color: white;
+}
+
+/* Responsividade */
+@media (max-width: 800px) {
+    .moodboard-grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: 180px;
+    }
+    .hero-text h1 { font-size: 2.5rem; }
+}

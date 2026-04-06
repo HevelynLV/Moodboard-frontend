@@ -1,0 +1,12 @@
+[cite_start]name: Hello World [cite: 107]
+[cite_start]on: [cite: 107]
+  [cite_start]push: [cite: 108]
+    [cite_start]branches: [main] [cite: 109]
+  [cite_start]workflow_dispatch: [cite: 110]
+
+[cite_start]jobs: [cite: 111]
+  [cite_start]build: [cite: 121]
+    [cite_start]runs-on: ubuntu-latest [cite: 123]
+    [cite_start]steps: [cite: 125]
+      - [cite_start]name: Print a message [cite: 116]
+        [cite_start]run: echo "Hello, world!" [cite: 116]
